@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>YouTube Channel Layout with CSS Grid & Flexbox</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:Roboto:400,500,600|Oswald:600">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">					
+		<link rel="stylesheet" href="./style.css">	
+	</head>
+	<body>
+	<div id="mySidenav" class="sidenav">
+		<div class="sidenav-logo">
+		<a class="menu-btn btn">
+			<i class="fas fa-bars" onclick="closeNav()"></i>
+		</a>
+		<div class="logo">
+			<a href="#">
+				<h1>
+					<i class="fab fa-youtube logo-icon"></i>YouTube
+				</h1>
+			</a>
+		</div>
+		</div>
+		<hr>
+		<a href="#">
+		<i class="fas fa-home pad-rt-10p"></i>Home</a>
+		<a href="#"><i class="fas fa-fire pad-rt-10p"></i>Trending</a>
+	</div>
+	<div id="overlay"></div>
+	<header class="ytb-header">
+		<button class="menu-btn btn">
+			<i class="fas fa-bars" onclick="openNav()"></i>
+		</button>
+		<div class="logo">
+			<a href="#">
+				<h1>
+					<i class="fab fa-youtube logo-icon"></i>YouTube
+				</h1>
+			</a>
+		</div>
+		<div class="site-search">
+			<input type="text" placeholder="Search" class="search-input">
+				<button class="search-btn">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+			<!-- 	<div class="user-menu">
+-->
+			<ul class="menu">
+				<li>
+					<button class="menu-btn btn icon-btn">
+						<i class="fas fa-upload"></i>
+					</button>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">Upload Video</a>
+						</li>
+						<li>
+							<a href="#">Go Live</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button class="menu-btn btn icon-btn">
+						<i class="fas fa-th"></i>
+					</button>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">Youtuebe Video</a>
+						</li>
+						<hr>
+
+						<li>
+							<a href="#">Youtube Music</a>
+						</li>
+						<li>
+							<a href="#">Youtube Kids</a>
+						</li>
+						<hr>
+						<li>
+							<a href="#">Creator Academy</a>
+						</li>
+						<li>
+							<a href="#">Youtube Artists</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button class="menu-btn btn icon-btn">
+						<i class="fas fa-bell"></i>
+					</button>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">Child 1</a>
+						</li>
+						<li>
+							<a href="#">Child 2</a>
+						</li>
+						<li>
+							<a href="#">Child 3</a>
+						</li>
+						<li>
+							<a href="#">Child 4</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button class="menu-btn btn icon-btn">
+						<i class="fas fa-user-circle"></i>
+					</button>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">Child 1</a>
+						</li>
+						<li>
+							<a href="#">Child 2</a>
+						</li>
+						<li>
+							<a href="#">Child 3</a>
+						</li>
+						<li>
+							<a href="#">Child 4</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</header>
+		<!-- Channel main content -->
+		<div class="main-sidenav">
+			<div class="icon-sidenav"><a class="content-mainside" href="#home"><i class="fas fa-home pad-10p"></i>Home</a></div>
+ 				
+ 				<div class="icon-sidenav"><a class="content-mainside" href="#trending"><i class="fas fa-fire pad-10p"></i>Trending</a></div>
+  				
+		</div>
+		<main class="channel-content">
+			
+			<div class="container">
+				<!-- Channel videos -->
+				<section class="channel-videos">
+					<div class="vlogs-playlist playlist">
+						<h2 class="playlist-title">Trending</h2>
+						<div class="playlist-videos">
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="1rating10" name="rating" value="10" />
+										<label for="1rating10" title="5 stars"></label>
+										<input type="radio" id="1rating9" name="rating" value="9" />
+										<label class="half" for="1rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="1rating8" name="rating" value="8" />
+										<label for="1rating8" title="4 stars"></label>
+										<input type="radio" id="1rating7" name="rating" value="7" />
+										<label class="half" for="1rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="1rating6" name="rating" value="6" />
+										<label for="1rating6" title="3 stars"></label>
+										<input type="radio" id="1rating5" name="rating" value="5" />
+										<label class="half" for="1rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="1rating4" name="rating" value="4" />
+										<label for="1rating4" title="2 stars"></label>
+										<input type="radio" id="1rating3" name="rating" value="3" />
+										<label class="half" for="1rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="1rating2" name="rating" value="2" />
+										<label for="1rating2" title="1 star"></label>
+										<input type="radio" id="1rating1" name="rating" value="1" />
+										<label class="half" for="1rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/QPxl_N9vkSo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="2rating10" name="rating" value="10" />
+										<label for="2rating10" title="5 stars"></label>
+										<input type="radio" id="2rating9" name="rating" value="9" />
+										<label class="half" for="2rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="2rating8" name="rating" value="8" />
+										<label for="2rating8" title="4 stars"></label>
+										<input type="radio" id="2rating7" name="rating" value="7" />
+										<label class="half" for="2rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="2rating6" name="rating" value="6" />
+										<label for="2rating6" title="3 stars"></label>
+										<input type="radio" id="2rating5" name="rating" value="5" />
+										<label class="half" for="2rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="2rating4" name="rating" value="4" />
+										<label for="2rating4" title="2 stars"></label>
+										<input type="radio" id="2rating3" name="rating" value="3" />
+										<label class="half" for="2rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="2rating2" name="rating" value="2" />
+										<label for="2rating2" title="1 star"></label>
+										<input type="radio" id="2rating1" name="rating" value="1" />
+										<label class="half" for="2rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/VkTGPqgovWU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="3rating10" name="rating" value="10" />
+										<label for="3rating10" title="5 stars"></label>
+										<input type="radio" id="3rating9" name="rating" value="9" />
+										<label class="half" for="3rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="3rating8" name="rating" value="8" />
+										<label for="3rating8" title="4 stars"></label>
+										<input type="radio" id="3rating7" name="rating" value="7" />
+										<label class="half" for="3rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="3rating6" name="rating" value="6" />
+										<label for="3rating6" title="3 stars"></label>
+										<input type="radio" id="3rating5" name="rating" value="5" />
+										<label class="half" for="3rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="3rating4" name="rating" value="4" />
+										<label for="3rating4" title="2 stars"></label>
+										<input type="radio" id="3rating3" name="rating" value="3" />
+										<label class="half" for="3rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="3rating2" name="rating" value="2" />
+										<label for="3rating2" title="1 star"></label>
+										<input type="radio" id="3rating1" name="rating" value="1" />
+										<label class="half" for="3rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/3Uu0iza3GqQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="4rating10" name="rating" value="10" />
+										<label for="4rating10" title="5 stars"></label>
+										<input type="radio" id="4rating9" name="rating" value="9" />
+										<label class="half" for="4rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="4rating8" name="rating" value="8" />
+										<label for="4rating8" title="4 stars"></label>
+										<input type="radio" id="4rating7" name="rating" value="7" />
+										<label class="half" for="4rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="4rating6" name="rating" value="6" />
+										<label for="4rating6" title="3 stars"></label>
+										<input type="radio" id="4rating5" name="rating" value="5" />
+										<label class="half" for="4rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="4rating4" name="rating" value="4" />
+										<label for="4rating4" title="2 stars"></label>
+										<input type="radio" id="4rating3" name="rating" value="3" />
+										<label class="half" for="4rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="4rating2" name="rating" value="2" />
+										<label for="4rating2" title="1 star"></label>
+										<input type="radio" id="4rating1" name="rating" value="1" />
+										<label class="half" for="4rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/WPsvw_Db-y4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="5rating10" name="rating" value="10" />
+										<label for="5rating10" title="5 stars"></label>
+										<input type="radio" id="5rating9" name="rating" value="9" />
+										<label class="half" for="5rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="5rating8" name="rating" value="8" />
+										<label for="5rating8" title="4 stars"></label>
+										<input type="radio" id="5rating7" name="rating" value="7" />
+										<label class="half" for="5rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="5rating6" name="rating" value="6" />
+										<label for="5rating6" title="3 stars"></label>
+										<input type="radio" id="5rating5" name="rating" value="5" />
+										<label class="half" for="5rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="5rating4" name="rating" value="4" />
+										<label for="5rating4" title="2 stars"></label>
+										<input type="radio" id="5rating3" name="rating" value="3" />
+										<label class="half" for="5rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="5rating2" name="rating" value="2" />
+										<label for="5rating2" title="1 star"></label>
+										<input type="radio" id="5rating1" name="rating" value="1" />
+										<label class="half" for="5rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/hfzSedylBog&t=25s" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="6rating10" name="rating" value="10" />
+										<label for="6rating10" title="5 stars"></label>
+										<input type="radio" id="6rating9" name="rating" value="9" />
+										<label class="half" for="6rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="6rating8" name="rating" value="8" />
+										<label for="6rating8" title="4 stars"></label>
+										<input type="radio" id="6rating7" name="rating" value="7" />
+										<label class="half" for="6rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="6rating6" name="rating" value="6" />
+										<label for="6rating6" title="3 stars"></label>
+										<input type="radio" id="6rating5" name="rating" value="5" />
+										<label class="half" for="6rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="6rating4" name="rating" value="4" />
+										<label for="6rating4" title="2 stars"></label>
+										<input type="radio" id="6rating3" name="rating" value="3" />
+										<label class="half" for="6rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="6rating2" name="rating" value="2" />
+										<label for="6rating2" title="1 star"></label>
+										<input type="radio" id="6rating1" name="rating" value="1" />
+										<label class="half" for="6rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/XGtMMYWhdUU&t=15s" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="7rating10" name="rating" value="10" />
+										<label for="7rating10" title="5 stars"></label>
+										<input type="radio" id="7rating9" name="rating" value="9" />
+										<label class="half" for="7rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="7rating8" name="rating" value="8" />
+										<label for="7rating8" title="4 stars"></label>
+										<input type="radio" id="7rating7" name="rating" value="7" />
+										<label class="half" for="7rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="7rating6" name="rating" value="6" />
+										<label for="7rating6" title="3 stars"></label>
+										<input type="radio" id="7rating5" name="rating" value="5" />
+										<label class="half" for="7rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="7rating4" name="rating" value="4" />
+										<label for="7rating4" title="2 stars"></label>
+										<input type="radio" id="7rating3" name="rating" value="3" />
+										<label class="half" for="7rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="7rating2" name="rating" value="2" />
+										<label for="7rating2" title="1 star"></label>
+										<input type="radio" id="7rating1" name="rating" value="1" />
+										<label class="half" for="7rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/HSxPwolOC9c" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vlogs-playlist playlist">
+						<h2 class="playlist-title">Trending</h2>
+						<div class="playlist-videos">
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="8rating10" name="rating" value="10" /><label for="8rating10" title="5 stars"></label>
+										<input type="radio" id="8rating9" name="rating" value="9" />
+										<label class="half" for="8rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="8rating8" name="rating" value="8" /><label for="8rating8" title="4 stars"></label>
+										<input type="radio" id="8rating7" name="rating" value="7" />
+										<label class="half" for="8rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="8rating6" name="rating" value="6" /><label for="8rating6" title="3 stars"></label>
+										<input type="radio" id="8rating5" name="rating" value="5" />
+										<label class="half" for="8rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="8rating4" name="rating" value="4" /><label for="8rating4" title="2 stars"></label>
+										<input type="radio" id="8rating3" name="rating" value="3" />
+										<label class="half" for="8rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="8rating2" name="rating" value="2" /><label for="8rating2" title="1 star"></label>
+										<input type="radio" id="8rating1" name="rating" value="1" />
+										<label class="half" for="8rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/JFTAN_NA4wk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="9rating10" name="rating" value="10" /><label for="9rating10" title="5 stars"></label>
+										<input type="radio" id="9rating9" name="rating" value="9" />
+										<label class="half" for="9rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="9rating8" name="rating" value="8" /><label for="9rating8" title="4 stars"></label>
+										<input type="radio" id="9rating7" name="rating" value="7" />
+										<label class="half" for="9rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="9rating6" name="rating" value="6" /><label for="9rating6" title="3 stars"></label>
+										<input type="radio" id="9rating5" name="rating" value="5" />
+										<label class="half" for="9rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="9rating4" name="rating" value="4" /><label for="9rating4" title="2 stars"></label>
+										<input type="radio" id="9rating3" name="rating" value="3" />
+										<label class="half" for="9rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="9rating2" name="rating" value="2" /><label for="9rating2" title="1 star"></label>
+										<input type="radio" id="9rating1" name="rating" value="1" />
+										<label class="half" for="9rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="10rating10" name="rating" value="10" /><label for="10rating10" title="5 stars"></label>
+										<input type="radio" id="10rating9" name="rating" value="9" />
+										<label class="half" for="10rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="10rating8" name="rating" value="8" /><label for="10rating8" title="4 stars"></label>
+										<input type="radio" id="10rating7" name="rating" value="7" />
+										<label class="half" for="10rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="10rating6" name="rating" value="6" /><label for="10rating6" title="3 stars"></label>
+										<input type="radio" id="10rating5" name="rating" value="5" />
+										<label class="half" for="10rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="10rating4" name="rating" value="4" /><label for="10rating4" title="2 stars"></label>
+										<input type="radio" id="10rating3" name="rating" value="3" />
+										<label class="half" for="10rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="10rating2" name="rating" value="2" /><label for="10rating2" title="1 star"></label>
+										<input type="radio" id="10rating1" name="rating" value="1" />
+										<label class="half" for="10rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="11rating10" name="rating" value="10" /><label for="11rating10" title="5 stars"></label>
+										<input type="radio" id="11rating9" name="rating" value="9" />
+										<label class="half" for="11rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="11rating8" name="rating" value="8" /><label for="11rating8" title="4 stars"></label>
+										<input type="radio" id="11rating7" name="rating" value="7" />
+										<label class="half" for="11rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="11rating6" name="rating" value="6" /><label for="11rating6" title="3 stars"></label>
+										<input type="radio" id="11rating5" name="rating" value="5" />
+										<label class="half" for="11rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="11rating4" name="rating" value="4" /><label for="11rating4" title="2 stars"></label>
+										<input type="radio" id="11rating3" name="rating" value="3" />
+										<label class="half" for="11rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="11rating2" name="rating" value="2" /><label for="11rating2" title="1 star"></label>
+										<input type="radio" id="11rating1" name="rating" value="1" />
+										<label class="half" for="11rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="12rating10" name="rating" value="10" /><label for="12rating10" title="5 stars"></label>
+										<input type="radio" id="12rating9" name="rating" value="9" />
+										<label class="half" for="12rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="12rating8" name="rating" value="8" /><label for="12rating8" title="4 stars"></label>
+										<input type="radio" id="12rating7" name="rating" value="7" />
+										<label class="half" for="12rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="12rating6" name="rating" value="6" /><label for="12rating6" title="3 stars"></label>
+										<input type="radio" id="12rating5" name="rating" value="5" />
+										<label class="half" for="12rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="12rating4" name="rating" value="4" /><label for="12rating4" title="2 stars"></label>
+										<input type="radio" id="12rating3" name="rating" value="3" />
+										<label class="half" for="12rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="12rating2" name="rating" value="2" /><label for="12rating2" title="1 star"></label>
+										<input type="radio" id="12rating1" name="rating" value="1" />
+										<label class="half" for="12rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="13rating10" name="rating" value="10" /><label for="13rating10" title="5 stars"></label>
+										<input type="radio" id="13rating9" name="rating" value="9" />
+										<label class="half" for="13rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="13rating8" name="rating" value="8" /><label for="13rating8" title="4 stars"></label>
+										<input type="radio" id="13rating7" name="rating" value="7" />
+										<label class="half" for="13rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="13rating6" name="rating" value="6" /><label for="13rating6" title="3 stars"></label>
+										<input type="radio" id="13rating5" name="rating" value="5" />
+										<label class="half" for="13rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="13rating4" name="rating" value="4" /><label for="13rating4" title="2 stars"></label>
+										<input type="radio" id="13rating3" name="rating" value="3" />
+										<label class="half" for="13rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="13rating2" name="rating" value="2" /><label for="13rating2" title="1 star"></label>
+										<input type="radio" id="13rating1" name="rating" value="1" />
+										<label class="half" for="13rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="14rating10" name="rating" value="10" /><label for="14rating10" title="5 stars"></label>
+										<input type="radio" id="14rating9" name="rating" value="9" />
+										<label class="half" for="14rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="14rating8" name="rating" value="8" /><label for="14rating8" title="4 stars"></label>
+										<input type="radio" id="14rating7" name="rating" value="7" />
+										<label class="half" for="14rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="14rating6" name="rating" value="6" /><label for="14rating6" title="3 stars"></label>
+										<input type="radio" id="14rating5" name="rating" value="5" />
+										<label class="half" for="14rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="14rating4" name="rating" value="4" /><label for="14rating4" title="2 stars"></label>
+										<input type="radio" id="14rating3" name="rating" value="3" />
+										<label class="half" for="14rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="14rating2" name="rating" value="2" /><label for="14rating2" title="1 star"></label>
+										<input type="radio" id="14rating1" name="rating" value="1" />
+										<label class="half" for="14rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vlogs-playlist playlist">
+						<h2 class="playlist-title">Trending</h2>
+						<div class="playlist-videos">
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="15rating10" name="rating" value="10" /><label for="15rating10" title="5 stars"></label>
+										<input type="radio" id="15rating9" name="rating" value="9" />
+										<label class="half" for="15rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="15rating8" name="rating" value="8" /><label for="15rating8" title="4 stars"></label>
+										<input type="radio" id="15rating7" name="rating" value="7" />
+										<label class="half" for="15rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="15rating6" name="rating" value="6" /><label for="15rating6" title="3 stars"></label>
+										<input type="radio" id="15rating5" name="rating" value="5" />
+										<label class="half" for="15rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="15rating4" name="rating" value="4" /><label for="15rating4" title="2 stars"></label>
+										<input type="radio" id="15rating3" name="rating" value="3" />
+										<label class="half" for="15rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="15rating2" name="rating" value="2" /><label for="15rating2" title="1 star"></label>
+										<input type="radio" id="15rating1" name="rating" value="1" />
+										<label class="half" for="15rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="16rating10" name="rating" value="10" /><label for="16rating10" title="5 stars"></label>
+										<input type="radio" id="16rating9" name="rating" value="9" />
+										<label class="half" for="16rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="16rating8" name="rating" value="8" /><label for="16rating8" title="4 stars"></label>
+										<input type="radio" id="16rating7" name="rating" value="7" />
+										<label class="half" for="16rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="16rating6" name="rating" value="6" /><label for="16rating6" title="3 stars"></label>
+										<input type="radio" id="16rating5" name="rating" value="5" />
+										<label class="half" for="16rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="16rating4" name="rating" value="4" /><label for="16rating4" title="2 stars"></label>
+										<input type="radio" id="16rating3" name="rating" value="3" />
+										<label class="half" for="16rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="16rating2" name="rating" value="2" /><label for="16rating2" title="1 star"></label>
+										<input type="radio" id="16rating1" name="rating" value="1" />
+										<label class="half" for="16rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="17rating10" name="rating" value="10" /><label for="17rating10" title="5 stars"></label>
+										<input type="radio" id="17rating9" name="rating" value="9" />
+										<label class="half" for="17rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="17rating8" name="rating" value="8" /><label for="17rating8" title="4 stars"></label>
+										<input type="radio" id="17rating7" name="rating" value="7" />
+										<label class="half" for="17rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="17rating6" name="rating" value="6" /><label for="17rating6" title="3 stars"></label>
+										<input type="radio" id="17rating5" name="rating" value="5" />
+										<label class="half" for="17rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="17rating4" name="rating" value="4" /><label for="17rating4" title="2 stars"></label>
+										<input type="radio" id="17rating3" name="rating" value="3" />
+										<label class="half" for="17rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="17rating2" name="rating" value="2" /><label for="17rating2" title="1 star"></label>
+										<input type="radio" id="17rating1" name="rating" value="1" />
+										<label class="half" for="17rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="18rating10" name="rating" value="10" /><label for="18rating10" title="5 stars"></label>
+										<input type="radio" id="18rating9" name="rating" value="9" />
+										<label class="half" for="18rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="18rating8" name="rating" value="8" /><label for="18rating8" title="4 stars"></label>
+										<input type="radio" id="18rating7" name="rating" value="7" />
+										<label class="half" for="18rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="18rating6" name="rating" value="6" /><label for="18rating6" title="3 stars"></label>
+										<input type="radio" id="18rating5" name="rating" value="5" />
+										<label class="half" for="18rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="18rating4" name="rating" value="4" /><label for="18rating4" title="2 stars"></label>
+										<input type="radio" id="18rating3" name="rating" value="3" />
+										<label class="half" for="18rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="18rating2" name="rating" value="2" /><label for="18rating2" title="1 star"></label>
+										<input type="radio" id="18rating1" name="rating" value="1" />
+										<label class="half" for="18rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="19rating10" name="rating" value="10" /><label for="19rating10" title="5 stars"></label>
+										<input type="radio" id="19rating9" name="rating" value="9" />
+										<label class="half" for="19rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="19rating8" name="rating" value="8" /><label for="19rating8" title="4 stars"></label>
+										<input type="radio" id="19rating7" name="rating" value="7" />
+										<label class="half" for="19rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="19rating6" name="rating" value="6" /><label for="19rating6" title="3 stars"></label>
+										<input type="radio" id="19rating5" name="rating" value="5" />
+										<label class="half" for="19rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="19rating4" name="rating" value="4" /><label for="19rating4" title="2 stars"></label>
+										<input type="radio" id="19rating3" name="rating" value="3" />
+										<label class="half" for="19rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="19rating2" name="rating" value="2" /><label for="19rating2" title="1 star"></label>
+										<input type="radio" id="19rating1" name="rating" value="1" />
+										<label class="half" for="19rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="20rating10" name="rating" value="10" /><label for="20rating10" title="5 stars"></label>
+										<input type="radio" id="20rating9" name="rating" value="9" />
+										<label class="half" for="20rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="20rating8" name="rating" value="8" /><label for="20rating8" title="4 stars"></label>
+										<input type="radio" id="20rating7" name="rating" value="7" />
+										<label class="half" for="20rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="20rating6" name="rating" value="6" /><label for="20rating6" title="3 stars"></label>
+										<input type="radio" id="20rating5" name="rating" value="5" />
+										<label class="half" for="20rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="20rating4" name="rating" value="4" /><label for="20rating4" title="2 stars"></label>
+										<input type="radio" id="20rating3" name="rating" value="3" />
+										<label class="half" for="20rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="20rating2" name="rating" value="2" /><label for="20rating2" title="1 star"></label>
+										<input type="radio" id="20rating1" name="rating" value="1" />
+										<label class="half" for="20rating1" title="1/2 star"></label>
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+							<div class="playlist-video" tabindex="0">
+								<div>
+									<fieldset class="rate">
+										<input type="radio" id="21rating10" name="rating" value="10" /><label for="21rating10" title="5 stars"></label>
+										<input type="radio" id="21rating9" name="rating" value="9" />
+										<label class="half" for="21rating9" title="4 1/2 stars"></label>
+										<input type="radio" id="21rating8" name="rating" value="8" /><label for="21rating8" title="4 stars"></label>
+										<input type="radio" id="21rating7" name="rating" value="7" />
+										<label class="half" for="21rating7" title="3 1/2 stars"></label>
+										<input type="radio" id="21rating6" name="rating" value="6" /><label for="21rating6" title="3 stars"></label>
+										<input type="radio" id="21rating5" name="rating" value="5" />
+										<label class="half" for="21rating5" title="2 1/2 stars"></label>
+										<input type="radio" id="21rating4" name="rating" value="4" /><label for="21rating4" title="2 stars"></label>
+										<input type="radio" id="21rating3" name="rating" value="3" />
+										<label class="half" for="21rating3" title="1 1/2 stars"></label>
+										<input type="radio" id="21rating2" name="rating" value="2" /><label for="21rating2" title="1 star"></label>
+										<input type="radio" id="21rating1" name="rating" value="1" />
+										<label class="half" for="21rating1" title="1/2 star"></label>
+										
+									</fieldset>
+								</div>
+								<div class="video-thumbnail">
+									<figure>
+										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</figure>
+								</div>
+								<div class="video-info">
+									<h3 class="video-title">Really Cool Collab 6</h3>
+									<ul class="video-meta-data">
+										<li class="video-creator">ReallyCoolVlogs 
+											<i class="fas fa-check-circle"></i>
+										</li>
+										<li class="video-views">128K views</li>
+										<li class="video-upload-date">2 days ago</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- End of main content container -->
+		</main>
+		<!-- End of main content -->
+		<footer class="site-footer">
+ 			 I'm the Sticky Footer.
+		</footer>
+		<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "200px";
+		  document.getElementById("overlay").style.display = "block";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		  document.getElementById("overlay").style.display = "none";
+		}
+
+		</script>
+	</body>
+</html>
