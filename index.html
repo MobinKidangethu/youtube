@@ -29,7 +29,7 @@
 		<a href="#"><i class="fas fa-fire pad-rt-10p"></i>Trending</a>
 	</div>
 	<div id="overlay"></div>
-	<header class="ytb-header">
+	<header class="ytb-header" id="header">
 		<button class="menu-btn btn">
 			<i class="fas fa-bars" onclick="openNav()"></i>
 		</button>
@@ -93,16 +93,16 @@
 					</button>
 					<ul class="sub-menu">
 						<li>
-							<a href="#">Child 1</a>
+							<a href="#">Google updates</a>
 						</li>
 						<li>
-							<a href="#">Child 2</a>
+							<a href="#">Corono update</a>
 						</li>
 						<li>
-							<a href="#">Child 3</a>
+							<a href="#">Recent stories</a>
 						</li>
 						<li>
-							<a href="#">Child 4</a>
+							<a href="#">iPhone released</a>
 						</li>
 					</ul>
 				</li>
@@ -112,76 +112,84 @@
 					</button>
 					<ul class="sub-menu">
 						<li>
-							<a href="#">Child 1</a>
+							<a href="#">Mobin Peter</a>
 						</li>
 						<li>
-							<a href="#">Child 2</a>
+							<a href="#">My Profile</a>
 						</li>
 						<li>
-							<a href="#">Child 3</a>
+							<a href="#">Settings</a>
 						</li>
 						<li>
-							<a href="#">Child 4</a>
+							<a href="#">Signout</a>
 						</li>
 					</ul>
 				</li>
 			</ul>
 		</header>
 		<!-- Channel main content -->
-		<div class="main-sidenav">
+		<div class="main-sidenav" id="mainSidenavigation">
 			<div class="icon-sidenav"><a class="content-mainside" href="#home"><i class="fas fa-home pad-10p"></i>Home</a></div>
- 				
- 				<div class="icon-sidenav"><a class="content-mainside" href="#trending"><i class="fas fa-fire pad-10p"></i>Trending</a></div>
-  				
+ 			<div class="icon-sidenav"><a class="content-mainside" href="#trending"><i class="fas fa-fire pad-10p"></i>Trending</a></div>
 		</div>
 		<main class="channel-content">
 			
 			<div class="container">
 				<!-- Channel videos -->
+
 				<section class="channel-videos">
-					<div class="vlogs-playlist playlist">
+					<div class="vlogs-playlist playlist" >
 						<h2 class="playlist-title">Trending</h2>
+						<div class="playlist-videos" >
+							<div class="playlist-video" tabindex="0" id="test" style="display: -webkit-box;">
+							</div>
+						</div>
+					</div>
+					<div class="vlogs-playlist playlist">
+						<h2 class="playlist-title">Recommendation</h2>
 						<div class="playlist-videos">
 							<div class="playlist-video" tabindex="0">
 								<div>
-									<fieldset class="rate">
-										<input type="radio" id="1rating10" name="rating" value="10" />
-										<label for="1rating10" title="5 stars"></label>
-										<input type="radio" id="1rating9" name="rating" value="9" />
-										<label class="half" for="1rating9" title="4 1/2 stars"></label>
-										<input type="radio" id="1rating8" name="rating" value="8" />
-										<label for="1rating8" title="4 stars"></label>
-										<input type="radio" id="1rating7" name="rating" value="7" />
-										<label class="half" for="1rating7" title="3 1/2 stars"></label>
-										<input type="radio" id="1rating6" name="rating" value="6" />
-										<label for="1rating6" title="3 stars"></label>
-										<input type="radio" id="1rating5" name="rating" value="5" />
-										<label class="half" for="1rating5" title="2 1/2 stars"></label>
-										<input type="radio" id="1rating4" name="rating" value="4" />
-										<label for="1rating4" title="2 stars"></label>
-										<input type="radio" id="1rating3" name="rating" value="3" />
-										<label class="half" for="1rating3" title="1 1/2 stars"></label>
-										<input type="radio" id="1rating2" name="rating" value="2" />
-										<label for="1rating2" title="1 star"></label>
-										<input type="radio" id="1rating1" name="rating" value="1" />
-										<label class="half" for="1rating1" title="1/2 star"></label>
-										
-									</fieldset>
-								</div>
-								<div class="video-thumbnail">
-									<figure>
-										<iframe src="https://www.youtube.com/embed/QPxl_N9vkSo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</figure>
-								</div>
-								<div class="video-info">
-									<h3 class="video-title">Really Cool Collab 6</h3>
-									<ul class="video-meta-data">
-										<li class="video-creator">ReallyCoolVlogs 
-											<i class="fas fa-check-circle"></i>
-										</li>
-										<li class="video-views">128K views</li>
-										<li class="video-upload-date">2 days ago</li>
-									</ul>
+									<div>
+										<fieldset class="rate">
+											<input type="radio" id="1rating10" name="rating" value="10" />
+											<label for="1rating10" title="5 stars"></label>
+											<input type="radio" id="1rating9" name="rating" value="9" />
+											<label class="half" for="1rating9" title="4 1/2 stars"></label>
+											<input type="radio" id="1rating8" name="rating" value="8" />
+											<label for="1rating8" title="4 stars"></label>
+											<input type="radio" id="1rating7" name="rating" value="7" />
+											<label class="half" for="1rating7" title="3 1/2 stars"></label>
+											<input type="radio" id="1rating6" name="rating" value="6" />
+											<label for="1rating6" title="3 stars"></label>
+											<input type="radio" id="1rating5" name="rating" value="5" />
+											<label class="half" for="1rating5" title="2 1/2 stars"></label>
+											<input type="radio" id="1rating4" name="rating" value="4" />
+											<label for="1rating4" title="2 stars"></label>
+											<input type="radio" id="1rating3" name="rating" value="3" />
+											<label class="half" for="1rating3" title="1 1/2 stars"></label>
+											<input type="radio" id="1rating2" name="rating" value="2" />
+											<label for="1rating2" title="1 star"></label>
+											<input type="radio" id="1rating1" name="rating" value="1" />
+											<label class="half" for="1rating1" title="1/2 star"></label>
+											
+										</fieldset>
+									</div>
+									<div class="video-thumbnail">
+										<figure>
+											<iframe src="https://www.youtube.com/embed/QPxl_N9vkSo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</figure>
+									</div>
+									<div class="video-info">
+										<h3 class="video-title">Really Cool Collab 6</h3>
+										<ul class="video-meta-data">
+											<li class="video-creator">ReallyCoolVlogs 
+												<i class="fas fa-check-circle"></i>
+											</li>
+											<li class="video-views">128K views</li>
+											<li class="video-upload-date">2 days ago</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="playlist-video" tabindex="0">
@@ -910,9 +918,9 @@
 										<label class="half" for="20rating1" title="1/2 star"></label>
 									</fieldset>
 								</div>
-								<div class="video-thumbnail">
+								<div class="video-thumbnail" >
 									<figure>
-										<iframe src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe id="ytbvideos" src="https://www.youtube.com/embed/OG__SwkV3wg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</figure>
 								</div>
 								<div class="video-info">
@@ -971,9 +979,22 @@
 		</main>
 		<!-- End of main content -->
 		<footer class="site-footer">
- 			 I'm the Sticky Footer.
+ 			 2020 Youtube
 		</footer>
 		<script>
+
+			window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+  		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    		document.getElementById("header").style.height = "70px";
+    		document.getElementById("mainSidenavigation").style.top = "70px"
+ 		} else {
+   			 document.getElementById("header").style.height = "100px";
+   			 document.getElementById("mainSidenavigation").style.top = "100px"
+
+  		}
+		}
 		function openNav() {
 		  document.getElementById("mySidenav").style.width = "200px";
 		  document.getElementById("overlay").style.display = "block";
@@ -984,6 +1005,66 @@
 		  document.getElementById("overlay").style.display = "none";
 		}
 
+		
+
+		 var urlArr = ["https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg",
+		 "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg", "https://www.youtube.com/embed/OG__SwkV3wg"];
+
+
+    for (var i = 1; i <=10; i++) {
+
+    var selection = document.getElementById('test');
+    var rDiv = document.createElement('div');
+
+
+	rDiv.innerHTML  = 				'<div>'
+									+'<fieldset class="rate">'
+										+'<input type="radio" id='+i+'rating10" name="rating" value="10" />'
+										+'<label for='+i+'rating10" title="5 stars"></label>'
+										+'<input type="radio" id='+i+'rating9" name="rating" value="9" />'
+										+'<label class="half" for='+i+'rating9" title="4 1/2 stars"></label>'
+										+'<input type="radio" id='+i+'rating8" name="rating" value="8" />'
+										+'<label for='+i+'rating8" title="4 stars"></label>'
+										+'<input type="radio" id='+i+'rating7" name="rating" value="7" />'
+										+'<label class="half" for='+i+'rating7" title="3 1/2 stars"></label>'
+										+'<input type="radio" id='+i+'rating6" name="rating" value="6" />'
+										+'<label for='+i+'rating6" title="3 stars"></label>'
+										+'<input type="radio" id='+i+'rating5" name="rating" value="5" />'
+										+'<label class="half" for='+i+'rating5" title="2 1/2 stars"></label>'
+										+'<input type="radio" id='+i+'rating4" name="rating" value="4" />'
+										+'<label for='+i+'rating4" title="2 stars"></label>'
+										+'<input type="radio" id='+i+'rating3" name="rating" value="3" />'
+										+'<label class="half" for='+i+'rating3" title="1 1/2 stars"></label>'
+										+'<input type="radio" id='+i+'rating2" name="rating" value="2" />'
+										+'<label for='+i+'rating2" title="1 star"></label>'
+										+'<input type="radio" id='+i+'rating1" name="rating" value="1" />'
+										+'<label class="half" for='+i+'rating1" title="1/2 star"></label>'
+										
+									+'</fieldset>'
+									+'</div>'
+								+'<div class="video-thumbnail">'
+									+'<figure>'
+										+'<iframe src="' + urlArr[i] + '" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+									+'</figure>'
+								+'</div>'
+								+'<div class="video-info">'
+									+'<h3 class="video-title">Really Cool Collab 6</h3>'
+									+'<ul class="video-meta-data">'
+										+'<li class="video-creator">ReallyCoolVlogs' 
+										+'	<i class="fas fa-check-circle"></i>'
+										+'</li>'
+									+'<li class="video-views">128K views</li>'
+										+'<li class="video-upload-date">2 days ago</li>'
+									+'</ul>'
+								+'</div>'
+
+selection.appendChild(rDiv);
+
+    
+
+
+    }
+		
 		</script>
 	</body>
 </html>
